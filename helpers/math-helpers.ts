@@ -29,8 +29,8 @@ export function areaTrianguloRectangulo (base:number, altura:number) {
     return area = 1/2 *base * altura
 }
 
-export function calcularMayor (numbers:number []) {
-    let temp = 0
+export function calcularMayorArreglo (numbers:number []) {
+    let temp = -99999
     for (let i = 0; i < numbers.length; i++) {
     
         if (numbers[i] > temp) {
@@ -41,8 +41,10 @@ export function calcularMayor (numbers:number []) {
 }
 
 export function parImpar (numbers:number []) {
+
     for (let i = 0; i < numbers.length; i++) {
-    
+        
+  
         if (numbers[i] % 2 === 0) {
             console.log('El numero ' + numbers[i] + ' es par') ;
         } else {
@@ -50,3 +52,32 @@ export function parImpar (numbers:number []) {
         }
     }
 }
+
+export function calcularMayorNumero (a:number,b:number,c:number) {
+
+    if (a >= b && a >= c) {
+        return a
+    } else if (b >= a && b >= c){
+        return b
+    }
+    return c
+}
+
+export function largestNameOfArray (nameArray: string[]) {
+
+    let largestName = '.';
+
+    for (let i = 0 ; i <nameArray.length ; i++){
+        let name = nameArray[i];
+
+        if (name.length > largestName.length) {
+
+            largestName = name;
+
+        }
+        
+    }
+    return  largestName
+}
+
+
